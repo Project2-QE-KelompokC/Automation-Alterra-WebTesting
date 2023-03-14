@@ -14,7 +14,7 @@ public class Hooks {
         ChromeOptions a = new ChromeOptions();
         WebDriverManager.chromedriver().setup();
         webDriver= new ChromeDriver(a);
-        String URL = "https://www.saucedemo.com/";
+        String URL = "https://alta-dashboard-immersive.vercel.app/;
         webDriver.get(URL);
         webDriver.manage().window().maximize();
     }
