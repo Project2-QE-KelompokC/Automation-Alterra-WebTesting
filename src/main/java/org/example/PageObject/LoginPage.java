@@ -1,4 +1,4 @@
-package org.example.PageObject.ListUser;
+package org.example.PageObject;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -44,5 +44,6 @@ public class LoginPage {
         dashboardPage.isDisplayed();
         return true;
     }
+
 
 }
