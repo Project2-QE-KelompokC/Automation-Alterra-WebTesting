@@ -116,7 +116,7 @@ public class MenteePageValidationStepdefs {
     }
 
     @When("^user click button edit$")
-    public void userClickButtonEdit() {
+    public void userClickButtonEdit() throws InterruptedException {
         MenteePageValidation menteePageValidation = new MenteePageValidation(webDriver);
         menteePageValidation.setBtnEdit();
 

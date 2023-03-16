@@ -137,4 +137,94 @@ public class MentePageFuncStepdefs {
         Assert.assertTrue(mentePageFunction.setVerifyDataMenteeInvalid());
         Thread.sleep(3000);
     }
+
+    @And("^user fill data add new mentee with valid data$")
+    public void userFillDataAddNewMenteeWithValidData() throws InterruptedException {
+        MentePageFunction mentePageFunction = new MentePageFunction(webDriver);
+        mentePageFunction.setFieldNama("Harun");
+        mentePageFunction.setFieldAddress("Jl bunga no 98");
+        mentePageFunction.setFieldAddressHome("Jl bunga no 98");
+        mentePageFunction.setFieldEmail("dar@gmail.com");
+        mentePageFunction.setRadioGender();
+        mentePageFunction.setFieldEmergencyName("Nanung");
+        mentePageFunction.setFieldEmergencyPhone("081292929");
+        mentePageFunction.setRadioEducation();
+        mentePageFunction.setFieldEducationMajor("Teknik");
+        mentePageFunction.setFieldEducationGraudate("2022-09-08");
+        Thread.sleep(3000);
+    }
+
+    @And("^user click button save$")
+    public void userClickButtonSave() throws InterruptedException {
+        MentePageFunction mentePageFunction = new MentePageFunction(webDriver);
+        mentePageFunction.setBtnSave();
+        Thread.sleep(3000);
+    }
+
+    @Then("^user succesfully add new mente go to page mentee list$")
+    public void userSuccesfullyAddNewMenteGoToPageMenteeList() throws InterruptedException {
+        MentePageFunction mentePageFunction = new MentePageFunction(webDriver);
+        Assert.assertTrue(mentePageFunction.setVerifyGoToPage());
+        Thread.sleep(3000);
+    }
+
+    @And("^user fill data add new mentee with invalid data$")
+    public void userFillDataAddNewMenteeWithInvalidData() throws InterruptedException {
+        MentePageFunction mentePageFunction = new MentePageFunction(webDriver);
+        mentePageFunction.setFieldNama("");
+        mentePageFunction.setFieldAddress("");
+        mentePageFunction.setFieldAddressHome("");
+        mentePageFunction.setFieldEmail("dar@gmail.com");
+        mentePageFunction.setRadioGender();
+        mentePageFunction.setFieldEmergencyName("Nanung");
+        mentePageFunction.setFieldEmergencyPhone("081292929");
+        mentePageFunction.setRadioEducation();
+        mentePageFunction.setFieldEducationMajor("Teknik");
+        mentePageFunction.setFieldEducationGraudate("2022-09-08");
+        Thread.sleep(3000);
+    }
+
+    @Then("^user cant be click save data invalid$")
+    public void userCantBeClickSaveDataInvalid() throws InterruptedException {
+        MentePageFunction mentePageFunction = new MentePageFunction(webDriver);
+        Assert.assertTrue(mentePageFunction.setVerifyCantBeClick());
+        Thread.sleep(1000);
+    }
+
+    @And("^user fill edit mentee with valid data$")
+    public void userFillEditMenteeWithValidData() throws InterruptedException {
+        WebElement a = webDriver.findElement(By.xpath("//input[@id='full_name']"));
+        a.clear();
+        Thread.sleep(1000);
+        a.sendKeys("wati");
+        Thread.sleep(1000);
+    }
+
+    @And("^user click submit$")
+    public void userClickSubmit() {
+        MentePageFunction mentePageFunction = new MentePageFunction(webDriver);
+        mentePageFunction.setBtnSubmit();
+    }
+
+    @Then("^user appear edited data mentee in mentee page$")
+    public void userAppearEditedDataMenteeInMenteePage() throws InterruptedException {
+        MentePageFunction mentePageFunction = new MentePageFunction(webDriver);
+        Assert.assertTrue(mentePageFunction.setVerifyEditData());
+        Thread.sleep(3000);
+    }
+
+    @And("^user fill edit mentee with invalid data$")
+    public void userFillEditMenteeWithInvalidData() throws InterruptedException {
+        WebElement a = webDriver.findElement(By.xpath("//input[@id='full_name']"));
+        a.clear();
+        Thread.sleep(1000);
+    }
+
+    @Then("^user cant be click submit with invalid data$")
+    public void userCantBeClickSubmitWithInvalidData() throws InterruptedException {
+        MentePageFunction mentePageFunction = new MentePageFunction(webDriver);
+        Assert.assertTrue(mentePageFunction.setVerifyCantBeClick2());
+        Thread.sleep(3000);
+
+    }
 }
