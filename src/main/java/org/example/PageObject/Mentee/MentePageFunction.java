@@ -26,4 +26,35 @@ public class MentePageFunction {
         return true;
     }
 
+    @FindBy(xpath = "//td[.='Immersive Frontend Batch 3']")
+    private WebElement verifyClass;
+    public boolean setVerifyClass(){
+        verifyClass.isDisplayed();
+        return true;
+    }
+
+    @FindBy(xpath = "//td[.='IT']")
+    private WebElement verifyEducation;
+    public boolean setVerifyEducation(){
+        verifyEducation.isDisplayed();
+        return true;
+    }
+
+    @FindBy(xpath = "//td[.='Join Class']")
+    private WebElement verifyStatus;
+    public boolean setVerifyStatus(){
+        verifyStatus.isDisplayed();
+        return true;
+    }
+    @FindBy(xpath = "//tr[2]/td[8]/button[@class='text-orange-alta hover:text-dark-alta']")
+    private WebElement btnDelete;
+    public void setBtnDelete (){
+        btnDelete.click();
+    }
+
+    @FindBy(xpath = "//button[@class='swal2-cancel swal2-styled swal2-default-outline']")
+    private WebElement btnYes;
+    public void setBtnYes (){
+        btnYes.click();
+    }
 }
