@@ -1,26 +1,29 @@
 
-@AddNewUser @KelompokC @PositiveCase
+@AddNewUser @KelompokC @Positive
 Feature: Add new user
-  Scenario: Add new user mentor with  role user and status active validation
+  Scenario Outline: Add new user mentor with  role user and status active validation
     Given open the website alta-dashboard-immersive.vercel.app
-    When input email "Admin@gmail.com" and password "qwerty"
+    When input email "<emailLogin>" and password "<passwordLogin>"
     Then click button login
     And already on Dashboard page
     When admin click button User on side bar
     Then appear User List Page
     When admin click button Add New User
     Then appear modal form Add New User
-    When admin input valid name "User5"
-    And admin input valid email "user5@gmail.com"
-    And admin input password "User5"
+    When admin input valid name "<newNameUser>"
+    And admin input valid email "<newEmail>"
+    And admin input password "<newPassword>>"
     And select Mentor on team dropdown
     And select User on role dropdown
     And select Active on status dropdown
     When admin click button Submit on modal Add New User
-    Then appear name "User5"
-    And email "user5@gmail.com" on list user
+    Then appear name "<newNameUser>"
+    And email "<newEmail>" on list user
+    Examples:
+      | emailLogin      | passwordLogin | newNameUser | newEmail          | newPassword |
+      | Admin@gmail.com | qwerty        | saya123     | saya123@gmail.com | saya123     |
 
-@AddInvalidUser @KelompokC @NegativeCase
+  @AddInvalidUser @KelompokC @Negative
   Scenario: Add new user mentor with  role user and status active validation
     Given open the website alta-dashboard-immersive.vercel.app
     When input email "Admin@gmail.com" and password "qwerty"

@@ -1,22 +1,25 @@
 
-@UpdateUser @KelompokC @PositiveCase
+@UpdateUser @KelompokC @Positive
 Feature: Update Data User
-  Scenario: Update data user name and
+  Scenario Outline: Update data user name and
     Given open the website alta-dashboard-immersive.vercel.app
-    When input email "Admin@gmail.com" and password "qwerty"
+    When input email "<emailLogin>" and password "<passwordLogin>"
     Then click button login
     And already on Dashboard page
     When admin click button User on side bar
     Then appear User List Page
-    When admin click icon edit user on full name "User5"
+    When admin click icon edit user on full name "<userName>"
     Then appear modal form Edit User
-    When admin edit name "User55"
-    And Admin edit email "User55@gmail.com"
+    When admin edit name "<updateName>"
+    And Admin edit email "<updateEmail>"
     When admin click button Submit on modal Edit User
-    Then appear new name "User5" on list user
-    And appear new email "User55@gmail.com" on list user
+    Then appear new name "<updateName>" on list user
+    And appear new email "<updateEmail>" on list user
+    Examples:
+      | emailLogin      | passwordLogin | userName | updateName | updateEmail        |
+      | Admin@gmail.com | qwerty        | saya123  | saya1234   | saya1234@gmail.com |
 
-  @UpdateInvalidUser @KelompokC @NegativeCase
+  @UpdateInvalidUser @KelompokC @Negative
   Scenario: Update data user name and
     Given open the website alta-dashboard-immersive.vercel.app
     When input email "Admin@gmail.com" and password "qwerty"
