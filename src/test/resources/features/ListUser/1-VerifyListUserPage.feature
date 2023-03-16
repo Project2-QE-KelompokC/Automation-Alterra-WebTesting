@@ -1,5 +1,5 @@
 
-@ListUser @Team
+@ListUser @KelompokC @PositiveCase
 Feature: Verify User List Page
 
   Scenario: User registered appear on user list page validation
