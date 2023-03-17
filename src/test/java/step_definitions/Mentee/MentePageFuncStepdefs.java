@@ -26,8 +26,8 @@ public class MentePageFuncStepdefs {
     @Given("^user already login$")
     public void userAlreadyLogin() throws InterruptedException {
         MenteePageValidation menteePageValidation = new MenteePageValidation(webDriver);
-        menteePageValidation.setEmailSignIn("Admin@gmail.com");
-        menteePageValidation.setPasswordSignIn("qwerty");
+        menteePageValidation.setEmailSignIn("user@gmail.com");
+        menteePageValidation.setPasswordSignIn("User");
         menteePageValidation.setBtnLogin();
         Thread.sleep(5000);
     }
