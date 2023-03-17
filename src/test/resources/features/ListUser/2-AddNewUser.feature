@@ -19,8 +19,8 @@ Feature: Add new user
     And admin click button Submit on modal Add New User
 
     Examples:
-      | emailLogin      | passwordLogin | newNameUser | newEmail             | newPassword |
-      | Admin@gmail.com | qwerty        | saya123456  | saya123456@gmail.com | saya123456  |
+      | emailLogin      | passwordLogin | newNameUser | newEmail        | newPassword |
+      | Admin@gmail.com | qwerty        | Kukuh       | Kukuh@gmail.com | Kukuh       |
 
   @AddInvalidUser @KelompokC @Negative
   Scenario: Add new user mentor with  role user and status active validation

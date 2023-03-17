@@ -48,7 +48,7 @@ Feature: List log
     When user clik from side mente
     Then user clik from ... detail
     And user clik add new log
-    When user click dropdown "Unit 3"
+    When user click dropdown "Join Class"
     Then user input "Ini merupakan judul 3" from text are title
     And User input feedback "ini merupakan fedback 3"
     And  User click save buttom
