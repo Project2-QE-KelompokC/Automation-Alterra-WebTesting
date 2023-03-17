@@ -16,20 +16,23 @@ public class VerifyUserListPageStepdefs {
     }
 
     @When("^admin click button User on side bar$")
-    public void adminClickButtonUserOnSideBar() {
+    public void adminClickButtonUserOnSideBar() throws InterruptedException {
         ListUserPage listUserPage = new ListUserPage(webDriver);
         listUserPage.setBtnUsers();
+        Thread.sleep(1000);
     }
 
     @Then("^appear User List Page$")
-    public void appearUserListPage() {
+    public void appearUserListPage() throws InterruptedException {
         ListUserPage listUserPage = new ListUserPage(webDriver);
         Assert.assertTrue(listUserPage.verifyUserListPage());
+        Thread.sleep(1000);
     }
 
     @And("^user registered appear on User List Page$")
-    public void userRegisteredAppearOnUserListPage() {
+    public void userRegisteredAppearOnUserListPage() throws InterruptedException {
         ListUserPage listUserPage = new ListUserPage(webDriver);
         Assert.assertTrue(listUserPage.verifyListUser());
+        Thread.sleep(1000);
     }
 }
