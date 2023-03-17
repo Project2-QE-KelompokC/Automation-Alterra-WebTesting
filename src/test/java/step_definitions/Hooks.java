@@ -12,9 +12,10 @@ public class Hooks {
     @Before
     public void openBrowser(){
         ChromeOptions a = new ChromeOptions();
+        a.addArguments("--remote-allow-origins=*");
         WebDriverManager.chromedriver().setup();
         webDriver= new ChromeDriver(a);
-        String URL = "https://alta-dashboard-immersive.vercel.app/;
+        String URL = "https://alta-dashboard-immersive.vercel.app/";
         webDriver.get(URL);
         webDriver.manage().window().maximize();
     }
