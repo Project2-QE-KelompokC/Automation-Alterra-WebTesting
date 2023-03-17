@@ -8,6 +8,6 @@ Feature: Add new user
     And already on Dashboard page
     When admin click button User on side bar
     Then appear User List Page
-    When admin click icon delete user "saya123456"
+    When admin click icon delete user "saya1234567"
     Then appear modal confirmation Delete User
     And admin click button Yes on modal Delete User

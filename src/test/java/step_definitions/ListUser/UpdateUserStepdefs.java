@@ -24,7 +24,7 @@ public class UpdateUserStepdefs {
     public void adminClickIconEditUserOnFullName(String updateUser) throws InterruptedException {
         WebElement a = webDriver.findElement(By.xpath("//td[text()='"+updateUser+"']/parent::tr/child::td[7]/child::button"));
         a.click();
-        Thread.sleep(1000);
+        Thread.sleep(3000);
     }
 
     @Then("^appear modal form Edit User$")

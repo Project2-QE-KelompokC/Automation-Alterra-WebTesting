@@ -1,4 +1,4 @@
-@Kelompok3
+@KelompokC
 Feature: Edit Data Class Page
 
   Scenario: Edit Data Classes Page

@@ -20,9 +20,10 @@ public class AddNewUserStepdefs {
     }
 
     @When("^admin click button Add New User$")
-    public void adminClickButtonAddNewUser() {
+    public void adminClickButtonAddNewUser() throws InterruptedException {
         ListUserPage listUserPage = new ListUserPage(webDriver);
         listUserPage.setBtnNewUsers();
+        Thread.sleep(3000);
     }
 
     @Then("^appear modal form Add New User$")

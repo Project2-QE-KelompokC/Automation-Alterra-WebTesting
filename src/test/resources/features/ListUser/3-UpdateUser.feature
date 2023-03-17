@@ -15,8 +15,8 @@ Feature: Update Data User
     And admin click button Submit on modal Edit User
 
     Examples:
-      | emailLogin      | passwordLogin | userName  | updateName | updateEmail          |
-      | Admin@gmail.com | qwerty        | saya12345 | saya123456 | saya123456@gmail.com |
+      | emailLogin      | passwordLogin | userName   | updateName  | updateEmail           |
+      | Admin@gmail.com | qwerty        | saya123456 | saya1234567 | saya1234567@gmail.com |
 
   @UpdateInvalidUser @KelompokC @Negative
   Scenario: Update data user name and
