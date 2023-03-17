@@ -1,10 +1,9 @@
-package step_definitions.ListClass;
+package step_definitions.ListClass_;
 
 import cucumber.api.java.en.And;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 import org.example.PageObject.ListClass.ListClassPage;
-import org.example.PageObject.ListUser.ListUserPage;
 import org.junit.Assert;
 import org.openqa.selenium.JavascriptExecutor;
 
