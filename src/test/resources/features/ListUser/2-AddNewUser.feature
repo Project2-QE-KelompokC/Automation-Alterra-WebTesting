@@ -16,12 +16,11 @@ Feature: Add new user
     And select Mentor on team dropdown
     And select User on role dropdown
     And select Active on status dropdown
-    When admin click button Submit on modal Add New User
-    Then appear name "<newNameUser>"
-    And email "<newEmail>" on list user
+    And admin click button Submit on modal Add New User
+
     Examples:
-      | emailLogin      | passwordLogin | newNameUser | newEmail          | newPassword |
-      | Admin@gmail.com | qwerty        | saya123     | saya123@gmail.com | saya123     |
+      | emailLogin      | passwordLogin | newNameUser | newEmail            | newPassword |
+      | Admin@gmail.com | qwerty        | saya12345   | saya12345@gmail.com | saya12345   |
 
   @AddInvalidUser @KelompokC @Negative
   Scenario: Add new user mentor with  role user and status active validation

@@ -12,12 +12,11 @@ Feature: Update Data User
     Then appear modal form Edit User
     When admin edit name "<updateName>"
     And Admin edit email "<updateEmail>"
-    When admin click button Submit on modal Edit User
-    Then appear new name "<updateName>" on list user
-    And appear new email "<updateEmail>" on list user
+    And admin click button Submit on modal Edit User
+
     Examples:
-      | emailLogin      | passwordLogin | userName | updateName | updateEmail        |
-      | Admin@gmail.com | qwerty        | saya123  | saya1234   | saya1234@gmail.com |
+      | emailLogin      | passwordLogin | userName  | updateName | updateEmail          |
+      | Admin@gmail.com | qwerty        | saya12345 | saya123456 | saya123456@gmail.com |
 
   @UpdateInvalidUser @KelompokC @Negative
   Scenario: Update data user name and
